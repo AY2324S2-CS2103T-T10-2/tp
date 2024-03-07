@@ -144,6 +144,11 @@
       "headingKeywords": {}
     },
     {
+      "src": "team/legionlegion.md",
+      "headings": {},
+      "headingKeywords": {}
+    },
+    {
       "src": "tutorials/AddRemark.md",
       "title": "Tutorial: Adding a command",
       "headings": {
