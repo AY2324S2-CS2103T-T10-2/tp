@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="build/resources/test" path="src/test/resources">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="resource" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/test" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/resources/main" path="src/main/resources">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="resource" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/main" path="src/main/java">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/test" path="build/generated/sources/annotationProcessor/java/test">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="build/classes/java/main" path="build/generated/sources/annotationProcessor/java/main">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/17.0.7/a686a637faa5c7fd95be464f75124414643b6ccd/javafx-fxml-17.0.7-mac.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/17.0.7/744c01a0f5b9653c1bd0c4325a4901285b58fb9d/javafx-fxml-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/17.0.7/2c983af31f7a8525a7730336295e084c42e51598/javafx-base-17.0.7-mac.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/17.0.7/e5c06a1c88fd298d8a99f4d0a6e1cbc38cbecadb/javafx-base-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/17.0.7/bf1cb6a3c81e190d56fd84aeeb0fc36d44f9be70/javafx-controls-17.0.7-win.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/17.0.7/c1f5ad6b239b8a51f69da9d6b894f4135d64893d/javafx-controls-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/17.0.7/5ba6d336d0e9a4134d96bb402890f5570c4562ae/javafx-base-17.0.7.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/17.0.7/e5c06a1c88fd298d8a99f4d0a6e1cbc38cbecadb/javafx-base-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.7.4/b8f38a249116b66d804a5ca2b14a3459b7913a94/jackson-core-2.7.4.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.7.4/ad04ede7e2c7f11a140710aec648375122e4e344/jackson-core-2.7.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/17.0.7/e5bc7891b9e2a389aeac4a5dcabf1130e852bf0c/javafx-controls-17.0.7.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/17.0.7/c1f5ad6b239b8a51f69da9d6b894f4135d64893d/javafx-controls-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.7.0/19f42c154ffc689f40a77613bc32caeb17d744e3/jackson-annotations-2.7.0.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.7.0/d0d412f71000701f765e1e280764e92337c659f5/jackson-annotations-2.7.0-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.7.4/390dbf17d4eb29a6157c6b9dcd9c93e7acac714/jackson-datatype-jsr310-2.7.4.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.7.4/e0d5de2aa1eaf9b8a77f9c2c61069826159a3172/jackson-datatype-jsr310-2.7.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/17.0.7/43ca0f3861f1e3a2cda4a6a7b8746bbf5bcbe754/javafx-graphics-17.0.7-win.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/17.0.7/acf8c954eca8c9bdc361a23b24dacc1506332e82/javafx-graphics-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/17.0.7/55eca64e65d90976f9d054dceb3921f4d08f4e8b/javafx-graphics-17.0.7.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/17.0.7/acf8c954eca8c9bdc361a23b24dacc1506332e82/javafx-graphics-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/17.0.7/88571e5fa666c2d5bb560cc44d5b6158a7b9c8e5/javafx-fxml-17.0.7-linux.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/17.0.7/744c01a0f5b9653c1bd0c4325a4901285b58fb9d/javafx-fxml-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/17.0.7/c2029cf4a359ddb5fe0dec9d11407ea97940e06a/javafx-graphics-17.0.7-linux.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/17.0.7/acf8c954eca8c9bdc361a23b24dacc1506332e82/javafx-graphics-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.7.4/1e9c6f3659644aeac84872c3b62d8e363bf4c96d/jackson-databind-2.7.4.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.7.4/fe8825e43af137edc12f7b54f38eb8bb5ddb3814/jackson-databind-2.7.4-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/17.0.7/2b79238d65ff33212eafb04acc6acbb7cd0a3300/javafx-base-17.0.7-win.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/17.0.7/e5c06a1c88fd298d8a99f4d0a6e1cbc38cbecadb/javafx-base-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/17.0.7/9f27959208043d012b99019a0a9d53d63bf40c56/javafx-base-17.0.7-linux.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/17.0.7/e5c06a1c88fd298d8a99f4d0a6e1cbc38cbecadb/javafx-base-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/17.0.7/dac7ac058b9c66a8a759dbf2d0ae4557749f3063/javafx-fxml-17.0.7-win.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/17.0.7/744c01a0f5b9653c1bd0c4325a4901285b58fb9d/javafx-fxml-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/17.0.7/9526295ad4cbee60dd2121802eb17a57d493e4d5/javafx-controls-17.0.7-mac.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/17.0.7/c1f5ad6b239b8a51f69da9d6b894f4135d64893d/javafx-controls-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/17.0.7/caeb9696d8901c66c9990ff337df884e1867d5b8/javafx-controls-17.0.7-linux.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/17.0.7/c1f5ad6b239b8a51f69da9d6b894f4135d64893d/javafx-controls-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/17.0.7/d5463ebc0f524d0225a6613877c381abfcd81918/javafx-graphics-17.0.7-mac.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/17.0.7/acf8c954eca8c9bdc361a23b24dacc1506332e82/javafx-graphics-17.0.7-sources.jar">
+		<attributes>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/3ef5276905e36f4d8055fe3cb0bdcc7503ffc85d/apiguardian-api-1.0.0.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/777508fa9f3e03cafb3c1fb2eba3dca317f4b1ee/apiguardian-api-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.1/efd9f971e91074491ea55b19f67b13470cf4fcdd/opentest4j-1.1.1.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.1/88a3a2cb15c413565462cea99f201b67bc6d2f10/opentest4j-1.1.1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.4.0/b4419dc190a5d82b9cac6b52e0af9140895c3f87/junit-platform-engine-1.4.0.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.4.0/44fdbe60e0df90028edf59d9ffdf06d9fc0e43d9/junit-platform-engine-1.4.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.4.0/30083adf3fbd7b734f12e6cb4d99dedab99fc34b/junit-jupiter-engine-5.4.0.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.4.0/6c8bbb6dc869058053ba370d5f9699656e2bc93/junit-jupiter-engine-5.4.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.4.0/e0b2ed8fac32ad6469d75d034e759f1969db8dda/junit-platform-commons-1.4.0.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.4.0/12517867d09f09a4e829b80bfc958f69d883fc11/junit-platform-commons-1.4.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/minrei/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.4.0/1a09f25a160f71c267f9ebe3b229b17805c683e9/junit-jupiter-api-5.4.0.jar" sourcepath="/home/minrei/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.4.0/1c4c344124325ada996131e1ba8bbe26108a869f/junit-jupiter-api-5.4.0-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle.buildServer" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
