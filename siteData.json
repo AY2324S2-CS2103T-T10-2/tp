@@ -28,6 +28,9 @@
       "title": "DevOps guide",
       "headings": {
         "devops-guide": "DevOps guide",
+        "github-forking-workflow": "Github Forking Workflow",
+        "making-changes": "Making Changes",
+        "updating-local-fork": "Updating Local Fork",
         "build-automation": "Build automation",
         "continuous-integration-ci": "Continuous integration (CI)",
         "code-coverage": "Code coverage",
