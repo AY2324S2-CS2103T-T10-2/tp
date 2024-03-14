@@ -135,6 +135,14 @@
       "headingKeywords": {}
     },
     {
+      "src": "team/chengjunyuan.md",
+      "title": "chengjunyuan's Project Portfolio Page",
+      "headings": {
+        "project-rapidtracer": "Project: RapidTracer"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "team/johndoe.md",
       "title": "John Doe's Project Portfolio Page",
       "headings": {
