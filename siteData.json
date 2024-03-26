@@ -115,11 +115,11 @@
       "headings": {
         "rapid-tracer": "Rapid Tracer",
         "quick-start": "Quick start",
-        "features": "Features",
-        "commands": "Commands",
-        "general-commands": "General Commands",
-        "contact-commands": "Contact Commands",
-        "appointment-commands": "Appointment Commands",
+        "using-rapid-tracer": "Using Rapid Tracer",
+        "patient-in-processing": "\n  Registering patients and appointments\n",
+        "searching-records": "\n  Searching existing records\n",
+        "editing-records": "\n  Editing and deleting records\n",
+        "general-help": "\n  General help\n",
         "faq": "FAQ",
         "known-issues": "Known issues",
         "command-summary": "Command summary"
