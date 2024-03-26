@@ -113,9 +113,9 @@
       "src": "UserGuide.md",
       "title": "User Guide",
       "headings": {
-        "rapid-tracer": "Rapid Tracer",
-        "quick-start": "Quick start",
-        "using-rapid-tracer": "Using Rapid Tracer",
+        "top": "\n  RapidTracer\n",
+        "quick-start-and-installation": "Quick start and installation",
+        "using-rapidtracer": "Using RapidTracer",
         "patient-in-processing": "\n  Registering patients and appointments\n",
         "searching-records": "\n  Searching existing records\n",
         "editing-records": "\n  Editing and deleting records\n",
