@@ -45,14 +45,13 @@ AddressBook *--> "1" UniqueAppointmentList
 UniqueAppointmentList --> "~* all" Appointment
 Appointment *--> "2" UUID
 Appointment *--> "1" AppointmentTime
-AppointmentTime *--> LocalDate
-AppointmentTime *--> LocalTime
-
+AppointmentTime *--> "1" LocalDate
+AppointmentTime *--> "1" LocalTime
 AddressBook *--> "1" UniquePersonList
 UniquePersonList --> "~* all" Person
 Person *--> "1" Name
 Person *--> "1" Phone
-Person *--> "1" Address
+Person *--> "0...1" Address
 Person *--> "1" UUID
 Person *--> "*" Tag
 
@@ -61,10 +60,9 @@ UniquePersonList -[hidden]right-> I
 
 Name -[hidden]right-> Phone
 Phone -[hidden]right-> Address
-Address -[hidden]right-> Email
 
 ModelManager --> "~* filtered" Person
 ModelManager --> "~* filtered" Appointment
-Person "1" -- "0..*" Appointment : has >
+Person -- "0..*" Appointment : has >
 
 @enduml

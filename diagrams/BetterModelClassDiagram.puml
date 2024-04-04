@@ -14,7 +14,7 @@ UniquePersonList -right-> Person
 
 Person -up-> "*" Tag
 
-Person *--> Name
-Person *--> Phone
-Person *--> Address
+Person *--> "1" Name
+Person *--> "1" Phone
+Person *--> "0...1" Address
 @enduml
