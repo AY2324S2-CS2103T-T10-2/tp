@@ -7,6 +7,7 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
 
+import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -22,6 +23,7 @@ import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
+import com.opencsv.exceptions.CsvException;
 
 import seedu.address.commons.exceptions.DataLoadingException;
 import seedu.address.logic.commands.Command;
@@ -48,15 +50,14 @@ public class ImportCommand extends Command {
             + "Parameters: "
             + PREFIX_IMPORT + " FILEPATH...\n"
             + "Example: " + COMMAND_WORD + " "
-            + PREFIX_IMPORT + "./data/patient.csv";
+            + PREFIX_IMPORT + "./data/PatientData.csv";
 
     public static final String MESSAGE_SUCCESS = "Imported patient contact from: %1$s";
     public static final String MESSAGE_LOADING_ERROR = "Import failed due to data loading error. \n"
-            + "Error occurs if the csv file is not put under the data directory \n"
-            + "or if there are missing entries in the csv file.";
+            + "Error occurs if the csv file is not put under the data directory \n";
     public static final String MESSAGE_FORMAT_ERROR = "Import failed due to format errors in the csv file. \n"
             + "Please make sure the csv file only contains name, phone, address and tags. \n"
-            + "Please delete all empty lines in the csv file.";
+            + "Please make sure there are no empty entries or rows in the csv file.";
     public static final String MESSAGE_PARSE_FILE_FAILURE = "Error occurred while parsing csv file, please try again.";
 
     private final Path filePath;
@@ -92,26 +93,20 @@ public class ImportCommand extends Command {
         try {
             List<Map<String, String>> data = readFile();
             for (Map<String, String> patientDetail : data) {
-                Person person;
-                try {
-                    person = createPersonFromMap(patientDetail);
-                } catch (Exception e) {
-                    throw new CommandException(MESSAGE_FORMAT_ERROR);
-                }
+                Person person = createPersonFromMap(patientDetail);
                 if (person != null && !model.hasPerson(person)) {
-                    try {
-                        String addPersonCommandInput = convertToAddPersonCommandInput(patientDetail);
-                        AddPersonCommand addPersonCommand = parseAddPersonCommand(addPersonCommandInput);
-                        addPersonCommand.execute(model);
-                    } catch (ParseException e) {
-                        throw new CommandException(MESSAGE_PARSE_FILE_FAILURE);
-                    }
+                    String addPersonCommandInput = convertToAddPersonCommandInput(patientDetail);
+                    AddPersonCommand addPersonCommand = parseAddPersonCommand(addPersonCommandInput);
+                    addPersonCommand.execute(model);
                 }
             }
-        } catch (DataLoadingException e) {
+        } catch (IOException | CsvException exception) {
             throw new CommandException(MESSAGE_LOADING_ERROR);
+        } catch (ParseException e) {
+            throw new CommandException(MESSAGE_PARSE_FILE_FAILURE);
+        } catch (Exception e) {
+            throw new CommandException(MESSAGE_FORMAT_ERROR);
         }
-
         return new CommandResult(String.format(MESSAGE_SUCCESS, filePath.toString()));
     }
 
@@ -119,25 +114,22 @@ public class ImportCommand extends Command {
      * Uses OpenCSV API to read in patient data from a csv file and returns a list of maps.
      * @throws DataLoadingException notifies if error occurs
      */
-    public List<Map<String, String>> readFile() throws DataLoadingException {
-        try (Reader reader = Files.newBufferedReader(filePath)) {
-            CSVParser parser = new CSVParserBuilder().build();
-            CSVReader csvReader = new CSVReaderBuilder(reader).withCSVParser(parser).build();
-            List<String[]> rows = csvReader.readAll();
-            List<Map<String, String>> details = new ArrayList<>();
-            String[] fields = rows.get(0);
-            for (int i = 1; i < rows.size(); i++) {
-                String[] row = rows.get(i);
-                Map<String, String> map = new HashMap<>();
-                for (int j = 0; j < fields.length; j++) {
-                    map.put(fields[j], row[j]);
-                }
-                details.add(map);
+    public List<Map<String, String>> readFile() throws Exception {
+        Reader reader = Files.newBufferedReader(filePath);
+        CSVParser parser = new CSVParserBuilder().build();
+        CSVReader csvReader = new CSVReaderBuilder(reader).withCSVParser(parser).build();
+        List<String[]> rows = csvReader.readAll();
+        List<Map<String, String>> details = new ArrayList<>();
+        String[] fields = rows.get(0);
+        for (int i = 1; i < rows.size(); i++) {
+            String[] row = rows.get(i);
+            Map<String, String> map = new HashMap<>();
+            for (int j = 0; j < fields.length; j++) {
+                map.put(fields[j], row[j]);
             }
-            return details;
-        } catch (Exception e) {
-            throw new DataLoadingException(e);
+            details.add(map);
         }
+        return details;
     }
 
     /**
@@ -145,7 +137,7 @@ public class ImportCommand extends Command {
      * and will be skipped if the person already exists in the list.
      * @return a person created from the list.
      */
-    public Person createPersonFromMap(Map<String, String> patientDetail) throws Exception {
+    public Person createPersonFromMap(Map<String, String> patientDetail) throws NullPointerException {
         String nameStr = patientDetail.get("name");
         String phoneStr = patientDetail.get("phone");
         String addressStr = patientDetail.get("address");

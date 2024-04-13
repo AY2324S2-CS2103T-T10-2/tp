@@ -56,7 +56,7 @@ public class ImportCommandTest {
         assertThrows(CommandException.class, () -> importCommand.execute(model));
     }
     @Test
-    public void execute_createPersonFromMap_success() throws Exception {
+    public void execute_createPersonFromMap_success() {
         Map<String, String> patientDetail = new HashMap<>();
         patientDetail.put("name", "John Doe");
         patientDetail.put("phone", "123456");
