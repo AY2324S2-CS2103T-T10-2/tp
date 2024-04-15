@@ -121,7 +121,8 @@
         "trace": "\n  4. Tracing close contacts\n",
         "editing-records": "\n  5. Editing and deleting records\n",
         "import-export-data": "\n    6. Importing and exporting patient records\n",
-        "general-help": "\n  7. General help\n",
+        "clear": "\n  7. Clearing data\n",
+        "general-help": "\n  8. General help\n",
         "faq": "FAQ",
         "known-issues": "Known issues",
         "command-summary": "Command summary"
