@@ -37,7 +37,7 @@ Interested in computational biology and bioinformatics!
 
 <img src="images/minreiseah.png" width="200px">
 
-[[github](http://github.com/minreiseah)] [[portfolio](team/minrei.md)]
+[[github](http://github.com/minreiseah)] [[portfolio](team/minreiseah.md)]
 
 * Role: Developer
 * Responsibilities: Data
