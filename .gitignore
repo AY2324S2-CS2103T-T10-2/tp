@@ -14,7 +14,7 @@ gradle-app.setting
 # Avoid ignore Gradle wrappper properties
 !gradle-wrapper.properties
 
-# Cache of project
+# Cache of projecthelp
 .gradletasknamecache
 
 # Eclipse Gradle plugin generated files

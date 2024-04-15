@@ -38,7 +38,8 @@ If you encounter any issues running RapidTracer, you may refer to the detailed b
 4. [Tracing close contacts](#trace)
 5. [Editing and deleting records](#editing-records)
 6. [Importing and exporting patient records](#import-export-data)
-7. [General help](#general-help)
+7. [Clear](#clear)
+8. [General help](#general-help)
 
 <h3 id="inputs" style="color: #088F8F">
   1. Input parameters
@@ -66,8 +67,8 @@ Parameter     | Max Length | Min Length | Remarks
 
 There are three ways you can register new patients and schedule new appointments.
 
-<b>1.</b> Use the `add` command to register a new patient.<br/>
-<b>2.</b> Use the `addappt` command to schedule a new appointment for an existing patient.<br/>
+<b>1.</b> Use the `add` command to register a new patient.<br />
+<b>2.</b> Use the `addappt` command to schedule a new appointment for an existing patient.<br />
 <b>3.</b> Use the `add` command to register a new patient and schedule an appointment immediately.
 
 <h4 id="add" style="color: #7393B3">
@@ -76,9 +77,11 @@ There are three ways you can register new patients and schedule new appointments
 
 You can add new patients to our database with the `add` command. Each patient must minimally have a name and a phone number for administrative purposes.
 
-Format: `add n/NAME p/PHONE_NUMBER [a/ADDRESS] [t/TAG]` <br>
-Example(s): `add n/Min Rei p/87654321`, `add n/Min Rei p/87654321 a/UTown`, `add n/Min Rei p/87654321 t/COVID`
+<b>Format:</b> `add n/NAME p/PHONE_NUMBER [a/ADDRESS] [t/TAG]` <br />
+<b>Example(s):</b> `add n/Min Rei p/87654321`, `add n/Min Rei p/87654321 a/UTown`, `add n/Min Rei p/87654321 t/COVID`<br />
+<b>Result of `add n/Min Rei p/87654321 t/COVID`:</b>
 
+![alt text](image-7.png)
 - Parameters may be typed in any order.
 - If you want to add multiple tags, please use multiple `[t/TAG]`.
 
@@ -87,9 +90,11 @@ Example(s): `add n/Min Rei p/87654321`, `add n/Min Rei p/87654321 a/UTown`, `add
 </h4>
 You can schedule appointments for existing patients using the `addappt` command.</p>
 
-Format: `addappt PATIENT_INDEX d/DATE_TIME` <br>
-Example(s): `add 1 d/today 3pm-4pm`, `add 1 d/16/10/2024 3pm-4pm`
+<b>Format:</b> `addappt PATIENT_INDEX d/DATE_TIME` <br>
+<b>Example(s):</b> `addappt 1 d/today 3pm-4pm`, `addappt 1 d/16/10/2024 3pm-4pm`</br>
+<b>Result of `addappt 1 d/16/10/2024 3pm-4pm`:</b>
 
+![alt text](image-8.png)
 - Adds an appointment to the patient at the specified `PATIENT_INDEX`.
 - Examples of accepted `DATE_TIME`:
   - `24/03/2024 10am-2pm`
@@ -99,7 +104,7 @@ Example(s): `add 1 d/today 3pm-4pm`, `add 1 d/16/10/2024 3pm-4pm`
   - `tdy 10am-2pm` (this will create an appointment from 10am to 2pm with today's date)
 
 <box type="info" seamless>
-  <b>Remark:</b> The <code>addappt</code> command allows the addition of appointments with date/time in the past. This functionality allows you to add an appointment for record purposes if you forget to add the appointment when the patient visits the clinic. 
+  <b>Remark:</b> The <code>addappt</code> command allows the addition of appointments with date/time in the past. This functionality allows you to add an appointment for record purposes if you forget to add the appointment when the patient visits the clinic.
 </box>
 
 <h4 id="add-with-appt" style="color: #7393B3">
@@ -108,12 +113,10 @@ Example(s): `add 1 d/today 3pm-4pm`, `add 1 d/16/10/2024 3pm-4pm`
 
 For walk-in appointments, you can also create a new contact and add an appointment with a single command. This command automatically creates an appointment linked to the patient which is being added.
 
-Format: `add n/NAME p/PHONE_NUMBER [a/ADDRESS] [t/TAG] [d/DATE_TIME]` <br>
-Example(s): `add 1 n/Boyd Anderson p/87654321 d/tdy 11am-12pm`
-
-<box type="info" seamless>
-  <b>Remark:</b> This <code>add</code> command is the same as the one above, but with an extra field (the `DATE_TIME`).
-</box>
+<b>Format:</b> `add n/NAME p/PHONE_NUMBER [a/ADDRESS] [t/TAG] [d/DATE_TIME]` <br>
+<b>Example(s):</b> `add n/Boyd Anderson p/87654321 d/tdy 11am-12pm`</br>
+<b>Result of `add n/Boyd Anderson p/87654321 d/tdy 11am-12pm`:</b>
+![alt text](image-9.png)
 
 - Parameters may be typed in any order.
 - If you want to add multiple tags, please use multiple `t/`.
@@ -125,6 +128,10 @@ Example(s): `add 1 n/Boyd Anderson p/87654321 d/tdy 11am-12pm`
   - `24/03/2024 10am - 2pm`
   - `today 10am-2pm` (this will create an appointment from 10am to 2pm with today's date)
   - `tdy 10am-2pm` (this will create an appointment from 10am to 2pm with today's date)
+
+<box type="info" seamless>
+  <b>Remark:</b> This <code>add</code> command is the same as the one above, but with an extra field (the `DATE_TIME`).
+</box>
 
 <h3 id="searching-records" style="color: #088F8F">
   3. Searching existing records
@@ -141,8 +148,11 @@ RapidTracer offers search functions for both patient and appointment data. Beyon
 
 Shows a list of contacts in RapidTracer matching the keywords provided. The contact only needs to partially match any of the keywords provided.
 
-Format: `find KEYWORD [MORE_KEYWORDS]`
+<b>Format:</b> `find KEYWORD [MORE_KEYWORDS]`<br />
+<b>Example(s):</b> `find min rei`<br />
+<b>Result of `find min rei`:</b>
 
+![alt text](image-10.png)
 - The `KEYWORD` search is case-insensitive.
 - Searches for the following patient information:
   - `NAME`
@@ -155,14 +165,16 @@ Format: `find KEYWORD [MORE_KEYWORDS]`
 
 Shows a list of appointments in RapidTracer matching the keywords provided. The appointment only needs to partially match any of the keywords provided.
 
-Format: `findappt KEYWORD [MORE_KEYWORDS]`
+<b>Format:</b> `findappt KEYWORD [MORE_KEYWORDS]`<br />
+<b>Example(s):</b> `findappt min rei`<br />
+<b>Result of `findappt min rei`:</b>
 
+![alt text](image-11.png)
 - The `KEYWORD` search is case-insensitive.
 - Order of keywords does not matter.
 - Searches for the following appointment information:
   - `NAME` of patient
 
-<img src="images/userguide/findappt.png" style="width: 100%;">
 <p></p>
 <p>Alternatively, simply double click any patient card to show the appointments associated with the patient.</p>
 
@@ -172,7 +184,11 @@ Format: `findappt KEYWORD [MORE_KEYWORDS]`
 
 Shows a list of all patients in RapidTracer.
 
-Format: `list`
+<b>Format:</b> `list`<br />
+<b>Example(s):</b> `list`<br />
+<b>Result of `list`:</b>
+
+![alt text](image-12.png)
 
 <h4 id="listappt" style="color: #7393B3">
   Listing appointments: <code>listappt</code>
@@ -180,8 +196,11 @@ Format: `list`
 
 Shows a list of all appointments in RapidTracer.
 
-Format: `listappt`
+<b>Format:</b> `listappt`
+<b>Example(s):</b> `listappt`<br />
+<b>Result of `listappt`:</b>
 
+![alt text](image-13.png)
 <h3 id="trace" style="color: #088F8F">
   4. Tracing close contacts
 </h3>
@@ -190,13 +209,15 @@ Performs contact tracing on the selected appointment.
 This shows a list of appointments that overlap with the selected appointment.
 This shows a list of patients that attended those appointments.
 
-Format: `trace APPT_INDEX`
+<b>Format:</b> `trace APPT_INDEX`<br />
+<b>Example(s):</b> `trace 1`<br />
+<b>Result of `trace 1`:</b>
 
+![alt text](image-14.png)
 - Traces the appointment at the specified `APPT_INDEX`.
 - 2 Appointments are also considered overlapping if one appointment start at the same time
   as the other one ends.
 
-<img src="images/userguide/trace.png" style="width: 100%;">
 <p></p>
 <p>Alternatively, simply double click any appointment card to trace all close contacts.</p>
 
@@ -212,9 +233,11 @@ In the event that patients update their contact details or reschedule an appoint
 
 An existing patient's details can be updated in RapidTracer using the `edit` command. Note that only patient details are changed. Their corresponding appointments will also be updated.
 
-Format: `edit PATIENT_INDEX [n/NAME] [p/PHONE_NUMBER] [a/ADDRESS] [t/TAG]` <br>
-Example(s): `edit 1 p/12345678`, `edit 1 a/NUS UTown`
+<b>Format:</b> `edit PATIENT_INDEX [n/NAME] [p/PHONE_NUMBER] [a/ADDRESS] [t/TAG]` <br />
+<b>Example(s):</b> `edit 1 p/12345678`, `edit 1 a/NUS UTown` <br />
+<b>Result of `edit 1 a/NUS UTown`:</b>
 
+![alt text](image-16.png)
 - Edits the patient's details at the specified `PATIENT_INDEX`.
 - Only one `PATIENT_INDEX` can be specified at a time.
 - At least one of the optional fields must be provided.
@@ -226,9 +249,11 @@ Example(s): `edit 1 p/12345678`, `edit 1 a/NUS UTown`
 
 An appointment can be rescheduled with the `editappt` command to change the date and time of the appointment.
 
-Format: `editappt APPT_INDEX d/DATE_TIME`<br>
-Example(s): `editappt 1 d/tdy 5pm-6pm`
+<b>Format:</b> `editappt APPT_INDEX d/DATE_TIME`<br />
+<b>Example(s):</b> `editappt 1 d/tdy 5pm-6pm`<br />
+<b>Result of `editappt 1 d/tdy 5pm-6pm`:</b>
 
+![alt text](image-19.png)
 - Edits the appointment's details at the specified `APPT_INDEX`.
 - Only one `APPT_INDEX` can be specified at a time.
 - Existing values will be updated to input values.
@@ -245,8 +270,11 @@ Example(s): `editappt 1 d/tdy 5pm-6pm`
 
 In the event that a patient requests for their data to be deleted, you can use the `delete` command to remove their patient information.
 
-Format: `delete PATIENT_INDEX`
+<b>Format:</b> `delete PATIENT_INDEX` <br />
+<b>Example(s):</b> `delete 2` <br />
+<b>Result of `delete 2`:</b>
 
+![alt text](image-21.png)
 - Deletes the patient at the specified `PATIENT_INDEX`.
 - Only one `PATIENT_INDEX` can be specified at a time.
 
@@ -256,8 +284,11 @@ Format: `delete PATIENT_INDEX`
 
 In the event that an appointment is cancelled, you can delete it using the `deleteappt` command.
 
-Format: `deleteappt APPT_INDEX`
+<b>Format:</b> `deleteappt APPT_INDEX` <br />
+<b>Example(s):</b> `deleteappt 1` <br />
+<b>Result of `deleteappt 1`:</b>
 
+![alt text](image-22.png)
 - Deletes the appointment at the specified `APPT_INDEX`.
 - Only one `APPT_INDEX` can be specified at a time.
 
@@ -271,10 +302,15 @@ Format: `deleteappt APPT_INDEX`
 
 You can import patient data from a csv file.
 
-![img_3.png](img_3.png)
+<b>Format:</b> `import i/./data/FILENAME.csv` <br />
+<b>Example(s):</b> `import i/./data/FILENAME.csv` <br />
+<b>Result of `import i/./data/PatientData.csv`:</b>
 
-Format: `import i/./data/FILENAME.csv`
+Patient Data file:
+![alt text](image-26.png)
 
+Import command executed:
+![alt text](image-25.png)
 - The csv file should be formatted in a way that it only contains 4 columns with specific headings as shown above. If the patient does not have an address or a tag, please insert "NIL" before importing.
 - If you want to add multiple tags for the same patient, please use `;` to separate the tags.
 - Please save your patient data file under the `data` directory created when you launch RapidTracer in an empty file.
@@ -291,8 +327,15 @@ Pre-existing patients (identified by similar names and phone numbers) in the rec
 
 You can export existing patient data to a csv file stored in a specific location.
 
-Format: `export`
+<b>Format:</b> `export` <br />
+<b>Example(s):</b> `export` <br />
+<b>Result of `export`:</b>
 
+Export command executed:
+![alt text](image-23.png)
+
+After export:
+![alt text](image-27.png)
 - Create a directory named `data` (if it doesn't exist) in the directory RapidTracer launched from.
 - Create a new csv file named `PatientData.csv` in the `data` directory.
 - The pre-existing data in the csv file will be overwritten once you perform the export action.
@@ -301,9 +344,21 @@ Format: `export`
   <b>Remark:</b> If you execute the export command without creating the data directory and PatientData.csv file, the directory and file will be automatically generated in the folder where RapidTracer is launched.
 </box>
 
+<h3 id="clear" style="color: #088F8F">
+  7. Clearing data
+</h3>
 
+<h4 id="help" style="color: #7393B3">
+  Clearing all records: <code>clear</code>
+</h4>
+
+<b>Format:</b> `clear` <br />
+<b>Example(s):</b> `clear` <br />
+<b>Result of `clear`:</b>
+
+![alt text](image-20.png)
 <h3 id="general-help" style="color: #088F8F">
-  7. General help
+  8. General help
 </h3>
 
 <h4 id="help" style="color: #7393B3">
@@ -312,17 +367,19 @@ Format: `export`
 
 For general help, click the `Help` option in the top left corner and click `Help` again, or type `help` to open the help window. The `help` window contains a link that directs [to this current User Guide](https://ay2324s2-cs2103t-t10-2.github.io/tp/UserGuide.html).
 
-Format: `help`
+<b>Format:</b> `help` <br />
+<b>Example(s):</b> `help` <br />
+<b>Result of `help`:</b>
 
+![alt text](image-18.png)
 <h4 id="exit" style="color: #7393B3">
   Exiting/closing RapidTracer: <code>exit</code>
 </h4>
 
 To properly exit RapidTracer, click the `File` option in the top left corner and click `Exit`, or type `exit`. This will ensure that the data is saved properly.
 
-Format: `exit`
-
-<img src="images/userguide/exit.png" style="width: 100%;">
+<b>Format:</b> `exit` <br />
+<b>Example(s):</b> `exit` <br />
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -368,4 +425,5 @@ Format: `exit`
 | Import patient records | `import i/./data/FILENAME.csv`                                     | `import i/./data/sample.csv`                                                                                                      |
 | Export patient records | `export`                                                           |                                                                                                                                   |
 | Help                   | `help`                                                             |                                                                                                                                   |
+| Clear data       | `clear`                                                             |                                                                                                                                  |
 | Exit application       | `exit`                                                             |                                                                                                                                   |
