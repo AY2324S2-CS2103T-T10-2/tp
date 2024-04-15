@@ -1,0 +1,53 @@
+@startuml
+
+actor User as user
+participant ":LogicManager" as LM
+participant ":AddressBookParser" as AP
+participant ":ExportCommand" as EC
+participant "model:Model" as model
+participant "r:CommandResult" as result
+
+-> LM :execute("export")
+activate LM
+
+LM -> AP :parseCommand("export")
+activate AP
+
+create EC
+AP -> EC
+activate EC
+EC --> AP:e
+deactivate EC
+
+AP --> LM: e
+deactivate AP
+
+LM -> EC: execute(model)
+activate EC
+
+EC -> model :getAddressBookFilePath()
+activate model
+model --> EC
+deactivate model
+
+EC -> EC : createCsvDirectory()
+EC --> EC
+EC -> EC: readJsonFile()
+EC --> EC
+EC -> EC: readPerson()
+EC --> EC
+EC -> EC : writeToCsvFile()
+EC --> EC
+
+create result
+EC -> result
+activate result
+result --> EC : r
+deactivate result
+
+EC -> LM : r
+deactivate EC
+
+LM --> user
+deactivate LM
+@enduml
