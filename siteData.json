@@ -45,6 +45,7 @@
       "headings": {
         "rapid-tracer-developer-guide": "Rapid Tracer Developer Guide",
         "acknowledgements": "Acknowledgements",
+        "the-opencsv-library-is-used-in-export-and-import-commands-for-features-related-to-csv-files": "The OpenCSV library is used in export and import commands for features related to CSV files.",
         "setting-up-getting-started": "Setting up, getting started",
         "design": "Design",
         "architecture": "Architecture",
@@ -55,6 +56,7 @@
         "common-classes": "Common classes",
         "implementation": "Implementation",
         "add-appointment-feature": "Add Appointment feature",
+        "export-feature": "Export feature",
         "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-requirements": "Appendix: Requirements",
